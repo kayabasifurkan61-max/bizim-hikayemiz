@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-primary: #120508;
+    --color-surface: #1C0A10;
+    --color-card: #270F16;
+    --color-text-primary: #FFF0F3;
+    --color-text-secondary: #FFB3C1;
+    --color-muted: #C97A8E;
+    --color-accent: #FF4D6D;
+    --color-accent-sub: #C9184A;
+    --color-warm-white: #FFF0F3;
+    --border-subtle: rgba(255, 77, 109, 0.15);
+  }
+
+  body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, .font-serif-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+  }
+
+  .font-editorial, .font-poetry {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .font-romantic {
+    font-family: 'Great Vibes', cursive;
+  }
+}
+
+/* Custom Film Grain */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Glassmorphism token */
+.glass-panel {
+  background: rgba(17, 20, 26, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(21, 24, 32, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Equalizer Bars Animation */
+@keyframes eqBar1 {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+@keyframes eqBar2 {
+  0%, 100% { height: 14px; }
+  50% { height: 6px; }
+}
+@keyframes eqBar3 {
+  0%, 100% { height: 8px; }
+  50% { height: 18px; }
+}
+@keyframes eqBar4 {
+  0%, 100% { height: 16px; }
+  50% { height: 4px; }
+}
+
+.animate-eq-1 { animation: eqBar1 0.8s ease-in-out infinite; }
+.animate-eq-2 { animation: eqBar2 0.7s ease-in-out infinite 0.1s; }
+.animate-eq-3 { animation: eqBar3 0.9s ease-in-out infinite 0.2s; }
+.animate-eq-4 { animation: eqBar4 0.75s ease-in-out infinite 0.15s; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #120508;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(216, 167, 177, 0.4);
+}
+
