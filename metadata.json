@@ -1,0 +1,6 @@
+{
+  "name": "Bizim Hikâyemiz",
+  "description": "İki kişinin birlikte biriktirdiği anılar, fotoğraflar ve özel anlar için özel dijital dünya.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
